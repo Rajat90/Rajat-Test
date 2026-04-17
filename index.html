@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free PDF Converter - Mock</title>
+    <title>PDFConvert Clone</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,199 +13,113 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="container nav-row">
-        <a href="#" class="logo">
-          <span class="logo-mark">PDF</span>
-          <span class="logo-text">FreeConvert</span>
-        </a>
-
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="brand" href="#">PDFConvert</a>
         <nav class="nav-links">
-          <a href="#tools">Tools</a>
-          <a href="#how">How it works</a>
-          <a href="#features">Features</a>
+          <a href="#tools">All Tools</a>
+          <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
         </nav>
-
-        <div class="nav-cta">
-          <button class="btn btn-light" id="loginBtn">Log in</button>
-          <button class="btn btn-dark" id="signupBtn">Sign up</button>
+        <div class="nav-actions">
+          <button class="btn btn-ghost">Sign in</button>
+          <button class="btn btn-outline">Sign up</button>
         </div>
       </div>
     </header>
 
     <main>
       <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-content">
-            <p class="eyebrow">FREE ONLINE PDF CONVERTER</p>
-            <h1>Convert files to and from PDF in one place</h1>
-            <p class="lead">
-              A high-fidelity mock page inspired by the FreePDFConvert home
-              experience. Upload files, choose a tool, and get results quickly.
-            </p>
+        <div class="container hero-inner">
+          <p class="hero-kicker">FREE PDF CONVERTER</p>
+          <h1>Convert files to and from PDF in seconds</h1>
+          <p class="hero-copy">
+            Quick, secure, and easy-to-use online converter inspired by the
+            FreePDFConvert landing experience.
+          </p>
+          <button class="upload-btn">+ CHOOSE FILE</button>
+          <p class="sub-copy">Drop files here or browse from your device.</p>
+        </div>
+      </section>
 
-            <ul class="hero-points">
-              <li>Quick processing</li>
-              <li>Secure transfer</li>
-              <li>No installation required</li>
+      <section class="tools" id="tools">
+        <div class="container">
+          <h2>Popular PDF Tools</h2>
+          <div class="tool-grid">
+            <article class="tool-card">
+              <h3>PDF to Word</h3>
+              <p>Turn PDFs into editable DOCX documents.</p>
+            </article>
+            <article class="tool-card">
+              <h3>Word to PDF</h3>
+              <p>Create high-quality PDFs from Word files.</p>
+            </article>
+            <article class="tool-card">
+              <h3>JPG to PDF</h3>
+              <p>Combine images and export as a single PDF.</p>
+            </article>
+            <article class="tool-card">
+              <h3>Compress PDF</h3>
+              <p>Reduce file size while preserving document quality.</p>
+            </article>
+            <article class="tool-card">
+              <h3>Merge PDF</h3>
+              <p>Combine multiple PDFs into one downloadable file.</p>
+            </article>
+            <article class="tool-card">
+              <h3>Split PDF</h3>
+              <p>Extract pages or split a PDF into multiple files.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits">
+        <div class="container benefit-wrap">
+          <div>
+            <h2>Why people love this converter</h2>
+            <ul>
+              <li>Fast processing with a clean and focused interface.</li>
+              <li>Supports common office and image file formats.</li>
+              <li>Works directly in your browser on desktop and mobile.</li>
             </ul>
           </div>
-
-          <div class="upload-card" aria-label="Upload area mock">
-            <div class="drop-area">
-              <p class="drop-icon">📄</p>
-              <h2>Select files to start</h2>
-              <p>Drop your files here, or pick from your device.</p>
-              <input id="fileInput" type="file" hidden />
-              <button class="upload-btn" id="chooseFileBtn">Choose File</button>
-              <div class="cloud-row">
-                <button class="cloud" id="googleDriveBtn">Google Drive</button>
-                <button class="cloud" id="dropboxBtn">Dropbox</button>
-              </div>
-            </div>
-            <p class="caption" id="uploadStatus">Max file size: 100 MB (mock value)</p>
+          <div class="status-card">
+            <p class="status-heading">Service Status</p>
+            <p><strong>99.9%</strong> uptime in the last 30 days</p>
+            <p><strong>256-bit TLS</strong> encrypted uploads</p>
+            <p><strong>Auto-delete</strong> processed files in 2 hours</p>
           </div>
         </div>
       </section>
 
-      <section id="tools" class="tools section">
+      <section class="faq" id="faq">
         <div class="container">
-          <div class="section-head">
-            <h2>All PDF tools</h2>
-            <p>Choose from the most commonly used conversion and editing tools.</p>
-          </div>
-
-          <div class="tools-grid">
-            <article class="tool tool-red">
-              <h3>PDF to Word</h3>
-              <p>Turn PDF docs into editable Word files.</p>
-              <button class="tool-btn" data-tool="PDF to Word">Use tool</button>
-            </article>
-            <article class="tool tool-orange">
-              <h3>Word to PDF</h3>
-              <p>Create polished PDFs from DOC and DOCX files.</p>
-              <button class="tool-btn" data-tool="Word to PDF">Use tool</button>
-            </article>
-            <article class="tool tool-blue">
-              <h3>PDF to JPG</h3>
-              <p>Export PDF pages as high-quality images.</p>
-              <button class="tool-btn" data-tool="PDF to JPG">Use tool</button>
-            </article>
-            <article class="tool tool-green">
-              <h3>JPG to PDF</h3>
-              <p>Combine images and save them as a PDF.</p>
-              <button class="tool-btn" data-tool="JPG to PDF">Use tool</button>
-            </article>
-            <article class="tool tool-purple">
-              <h3>Compress PDF</h3>
-              <p>Reduce file size for easier sharing.</p>
-              <button class="tool-btn" data-tool="Compress PDF">Use tool</button>
-            </article>
-            <article class="tool tool-cyan">
-              <h3>Merge PDF</h3>
-              <p>Join multiple PDF files in seconds.</p>
-              <button class="tool-btn" data-tool="Merge PDF">Use tool</button>
-            </article>
-            <article class="tool tool-rose">
-              <h3>Split PDF</h3>
-              <p>Extract selected pages into a new file.</p>
-              <button class="tool-btn" data-tool="Split PDF">Use tool</button>
-            </article>
-            <article class="tool tool-slate">
-              <h3>Rotate PDF</h3>
-              <p>Fix page orientation before downloading.</p>
-              <button class="tool-btn" data-tool="Rotate PDF">Use tool</button>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="how" class="section how">
-        <div class="container">
-          <div class="section-head">
-            <h2>How it works</h2>
-            <p>Three simple steps for fast conversion.</p>
-          </div>
-          <div class="steps">
-            <article>
-              <span>1</span>
-              <h3>Upload</h3>
-              <p>Select a file from your computer or cloud storage.</p>
-            </article>
-            <article>
-              <span>2</span>
-              <h3>Convert</h3>
-              <p>Pick the tool and let the converter process your file.</p>
-            </article>
-            <article>
-              <span>3</span>
-              <h3>Download</h3>
-              <p>Save your new file instantly when conversion is complete.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="features" class="section features">
-        <div class="container features-grid">
-          <article>
-            <h3>Secure by design</h3>
-            <p>
-              Files are transmitted over encrypted connections and automatically
-              deleted after processing (mock behavior text).
-            </p>
-          </article>
-          <article>
-            <h3>Works everywhere</h3>
-            <p>
-              This mock interface is fully responsive, designed for desktop,
-              tablet, and mobile browsers.
-            </p>
-          </article>
-          <article>
-            <h3>Fast workflow</h3>
-            <p>
-              Jump between conversion tools from one unified dashboard-like
-              layout.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="faq" class="section faq">
-        <div class="container narrow">
-          <div class="section-head center">
-            <h2>Frequently asked questions</h2>
-          </div>
-          <details open>
-            <summary>Is this the real FreePDFConvert service?</summary>
-            <p>
-              No. This is a standalone mock page designed to emulate the visual
-              structure only.
-            </p>
+          <h2>Frequently asked questions</h2>
+          <details>
+            <summary>Is this website free to use?</summary>
+            <p>Yes, core PDF conversion features are free for everyday use.</p>
           </details>
           <details>
-            <summary>Can I actually convert files here?</summary>
-            <p>
-              Not yet. This page focuses on front-end UI and does not include
-              backend conversion logic.
-            </p>
+            <summary>Do I need to install software?</summary>
+            <p>No install required. Everything runs in your web browser.</p>
           </details>
           <details>
-            <summary>Is the layout mobile-friendly?</summary>
-            <p>Yes. The page adapts to smaller screens with a stacked layout.</p>
+            <summary>Are my files private?</summary>
+            <p>
+              Files are transferred securely and removed automatically after
+              processing.
+            </p>
           </details>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-row">
-        <p>Created by Rajat</p>
-        <p>Built for UI demonstration purposes.</p>
+    <footer class="site-footer" id="pricing">
+      <div class="container footer-wrap">
+        <p>© 2026 PDFConvert Clone.</p>
+        <p>Built as a static front-end replica for demo purposes.</p>
       </div>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
