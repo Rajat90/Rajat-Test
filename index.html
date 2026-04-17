@@ -57,17 +57,19 @@
               <p class="drop-icon">📄</p>
               <h2>Select files to start</h2>
               <p>Drop your files here, or pick from your device.</p>
-              <input id="fileInput" type="file" hidden />
+              <input id="fileInput" type="file" multiple hidden />
               <button class="upload-btn" id="chooseFileBtn">Choose File</button>
               <div class="cloud-row">
                 <button class="cloud" id="googleDriveBtn">Google Drive</button>
                 <button class="cloud" id="dropboxBtn">Dropbox</button>
               </div>
             </div>
-            <p class="caption" id="uploadStatus">Max file size: 100 MB (mock value)</p>
-            <p class="action-status" id="actionStatus" aria-live="polite">
-              Ready. Click any button to test functionality.
-            </p>
+            <div class="status-panel">
+              <p class="caption" id="uploadStatus">Max file size: 100 MB (mock value)</p>
+              <p class="action-status" id="actionStatus" aria-live="polite">
+                Ready. Select files and click a tool button.
+              </p>
+            </div>
           </div>
         </div>
       </section>

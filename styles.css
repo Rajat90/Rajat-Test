@@ -153,15 +153,16 @@ h1 {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 20px;
-  padding: 1rem;
+  padding: 1rem 1rem 0.85rem;
   box-shadow: 0 14px 30px rgb(16 24 39 / 8%);
+  overflow: hidden;
 }
 
 .drop-area {
   border: 2px dashed #ffb5ab;
   border-radius: 16px;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2.1rem 1.1rem;
   background: #fff8f7;
 }
 
@@ -212,18 +213,27 @@ h1 {
 }
 
 .caption {
-  margin: 0.8rem 0 0;
+  margin: 0;
   text-align: center;
   color: #8b95a7;
   font-size: 0.8rem;
 }
 
 .action-status {
-  margin: 0.7rem 0 0;
+  margin: 0.45rem 0 0;
   text-align: center;
   color: #374151;
   font-size: 0.86rem;
   min-height: 1.25rem;
+}
+
+.status-panel {
+  border-top: 1px solid #e9edf5;
+  margin-top: 0.85rem;
+  padding: 0.75rem 0 0.2rem;
+  display: grid;
+  justify-items: center;
+  gap: 0.15rem;
 }
 
 .section {
