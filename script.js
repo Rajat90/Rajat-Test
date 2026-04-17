@@ -4,12 +4,17 @@
   const chooseFileBtn = document.getElementById('chooseFileBtn');
   const fileInput = document.getElementById('fileInput');
   const uploadStatus = document.getElementById('uploadStatus');
+  const actionStatus = document.getElementById('actionStatus');
   const googleDriveBtn = document.getElementById('googleDriveBtn');
   const dropboxBtn = document.getElementById('dropboxBtn');
   const toolButtons = Array.from(document.querySelectorAll('.tool-btn'));
 
   function notify(message) {
-    window.alert(message);
+    if (actionStatus) {
+      actionStatus.textContent = message;
+    }
+    // Keep logs for debugging in browser console without intrusive popups.
+    console.log(message);
   }
 
   loginBtn?.addEventListener('click', function () {
@@ -28,6 +33,7 @@
     const target = event.target;
     if (!target || !target.files || target.files.length === 0) {
       uploadStatus.textContent = 'No file selected yet.';
+      notify('Choose File clicked, but no file was selected.');
       return;
     }
 
