@@ -264,6 +264,22 @@ h1 {
   font-size: 0.92rem;
 }
 
+.tool-btn {
+  margin-top: 0.8rem;
+  border: 1px solid #cfd7e7;
+  background: #fff;
+  color: #1e293b;
+  border-radius: 9px;
+  padding: 0.45rem 0.72rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tool-btn:hover {
+  background: #f8fafc;
+}
+
 .tool-red { background: #fff0ee; }
 .tool-orange { background: #fff6ed; }
 .tool-blue { background: #eff6ff; }

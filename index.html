@@ -28,8 +28,8 @@
         </nav>
 
         <div class="nav-cta">
-          <button class="btn btn-light">Log in</button>
-          <button class="btn btn-dark">Sign up</button>
+          <button class="btn btn-light" id="loginBtn">Log in</button>
+          <button class="btn btn-dark" id="signupBtn">Sign up</button>
         </div>
       </div>
     </header>
@@ -57,13 +57,14 @@
               <p class="drop-icon">📄</p>
               <h2>Select files to start</h2>
               <p>Drop your files here, or pick from your device.</p>
-              <button class="upload-btn">Choose File</button>
+              <input id="fileInput" type="file" hidden />
+              <button class="upload-btn" id="chooseFileBtn">Choose File</button>
               <div class="cloud-row">
-                <button class="cloud">Google Drive</button>
-                <button class="cloud">Dropbox</button>
+                <button class="cloud" id="googleDriveBtn">Google Drive</button>
+                <button class="cloud" id="dropboxBtn">Dropbox</button>
               </div>
             </div>
-            <p class="caption">Max file size: 100 MB (mock value)</p>
+            <p class="caption" id="uploadStatus">Max file size: 100 MB (mock value)</p>
           </div>
         </div>
       </section>
@@ -79,34 +80,42 @@
             <article class="tool tool-red">
               <h3>PDF to Word</h3>
               <p>Turn PDF docs into editable Word files.</p>
+              <button class="tool-btn" data-tool="PDF to Word">Use tool</button>
             </article>
             <article class="tool tool-orange">
               <h3>Word to PDF</h3>
               <p>Create polished PDFs from DOC and DOCX files.</p>
+              <button class="tool-btn" data-tool="Word to PDF">Use tool</button>
             </article>
             <article class="tool tool-blue">
               <h3>PDF to JPG</h3>
               <p>Export PDF pages as high-quality images.</p>
+              <button class="tool-btn" data-tool="PDF to JPG">Use tool</button>
             </article>
             <article class="tool tool-green">
               <h3>JPG to PDF</h3>
               <p>Combine images and save them as a PDF.</p>
+              <button class="tool-btn" data-tool="JPG to PDF">Use tool</button>
             </article>
             <article class="tool tool-purple">
               <h3>Compress PDF</h3>
               <p>Reduce file size for easier sharing.</p>
+              <button class="tool-btn" data-tool="Compress PDF">Use tool</button>
             </article>
             <article class="tool tool-cyan">
               <h3>Merge PDF</h3>
               <p>Join multiple PDF files in seconds.</p>
+              <button class="tool-btn" data-tool="Merge PDF">Use tool</button>
             </article>
             <article class="tool tool-rose">
               <h3>Split PDF</h3>
               <p>Extract selected pages into a new file.</p>
+              <button class="tool-btn" data-tool="Split PDF">Use tool</button>
             </article>
             <article class="tool tool-slate">
               <h3>Rotate PDF</h3>
               <p>Fix page orientation before downloading.</p>
+              <button class="tool-btn" data-tool="Rotate PDF">Use tool</button>
             </article>
           </div>
         </div>
@@ -193,9 +202,10 @@
 
     <footer class="footer">
       <div class="container footer-row">
-        <p>© 2026 Free PDF Converter Mock</p>
+        <p>Created by Rajat</p>
         <p>Built for UI demonstration purposes.</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
